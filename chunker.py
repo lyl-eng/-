@@ -1,6 +1,6 @@
 # src/chunker.py
 
-def chunk_text(text: str, max_len: int = 1500) -> list[str]:
+def chunk_text(text: str, max_len: int = 800) -> list[str]:
     """将长英文文本分段，避免模型上下文超限。"""
     chunks = []
     current = []
@@ -17,3 +17,4 @@ def chunk_text(text: str, max_len: int = 1500) -> list[str]:
     if current:
         chunks.append('\n'.join(current))
     return chunks
+
